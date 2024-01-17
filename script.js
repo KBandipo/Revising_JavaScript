@@ -149,7 +149,7 @@ function getBook(id) {
 // const bookTitle= books[1].title;
 // bookTitle
 
-const book = getBook(1);
+const book = getBook(2);
 
 // const title = book.title;
 // title;
@@ -208,3 +208,25 @@ console.log(pageRange);
 const getYear = (str) => str.split("-")[0];
 
 console.log(getYear(publicationDate));
+
+// Short Circuiting with logical &&, ||, ??
+console.log(true && "God is always faithful");
+console.log(false && "God fails");
+console.log(hasMovieAdaptation && "This book has a movie");
+
+console.log(true || "Not displaying");
+console.log(false || "Displaying");
+
+console.log(book.translations.spanish);
+
+const spanishTranslation = book.translations.spanish || "Not Translated";
+spanishTranslation;
+
+// Note 0 is a data
+console.log(book.reviews.librarything.reviewsCount);
+
+const countWrong = book.reviews.librarything.reviewsCount || "No data";
+countWrong;
+
+const count = book.reviews.librarything.reviewsCount ?? "No data";
+count;
