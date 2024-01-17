@@ -191,6 +191,10 @@ const updatedBook = {
   // Adding a new property
   moviePublicationDate: "2001-12-19",
   // overwriting an existing property
-  pages: 1210,
+  // pages: 1210,
 };
 updatedBook;
+
+// Tenery operator
+const pageRange = pages > 1000 ? "Over a thousand" : "less than a thousand";
+pageRange;
