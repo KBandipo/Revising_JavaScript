@@ -197,4 +197,14 @@ updatedBook;
 
 // Tenery operator
 const pageRange = pages > 1000 ? "Over a thousand" : "less than a thousand";
-pageRange;
+console.log(pageRange);
+
+// Arrow function
+
+// function getYear(str) {
+//   return str.split("-")[0];
+// }
+
+const getYear = (str) => str.split("-")[0];
+
+console.log(getYear(publicationDate));
