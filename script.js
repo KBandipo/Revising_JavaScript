@@ -149,7 +149,7 @@ function getBook(id) {
 // const bookTitle= books[1].title;
 // bookTitle
 
-const book = getBook(2);
+const book = getBook(1);
 
 // const title = book.title;
 // title;
@@ -172,5 +172,25 @@ console.log(title, author, genres);
 // const primaryGenres =genres[1];
 // const secondaryGenres =genres[2];
 
-const [primaryGenres, secondaryGenres] = genres;
-console.log(primaryGenres, secondaryGenres);
+// const [primaryGenres, secondaryGenres] = genres;
+// console.log(primaryGenres, secondaryGenres);
+
+// Rest and Spread operator
+
+// Rest Operator
+const [primaryGenres, secondaryGenres, ...otherGenres] = genres;
+console.log(primaryGenres, secondaryGenres, otherGenres);
+
+// Spread operator
+const newGenre = [...genres, "new movie"];
+console.log(newGenre);
+
+// Spread operator in object
+const updatedBook = {
+  ...book,
+  // Adding a new property
+  moviePublicationDate: "2001-12-19",
+  // overwriting an existing property
+  pages: 1210,
+};
+updatedBook;
