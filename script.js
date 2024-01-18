@@ -286,3 +286,8 @@ const adventureBooksTitle = books
   .filter((theBooks) => theBooks.genres.includes("adventure"))
   .map((theBooks) => theBooks.title);
 console.log(adventureBooksTitle);
+
+// Reduce method
+
+const countPagesAllBooks = books.reduce((sum, book) => sum + book.pages, 0);
+console.log(countPagesAllBooks);
