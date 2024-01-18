@@ -263,3 +263,26 @@ const moreNewDataInArray = books.map((book) => [
   book.hasMovieAdaptation,
 ]);
 console.log(moreNewDataInArray);
+
+// Filter Method
+
+const authorName = books.filter((book) => book.author === "J. R. R. Tolkien");
+authorName;
+
+const longBooks = books.filter((books) => books.pages > 500);
+console.log(longBooks);
+
+const longBooksWithMovie = books
+  .filter((books) => books.pages > 100)
+  .filter((book) => !book.hasMovieAdaptation);
+console.log(longBooksWithMovie);
+
+const adventureBooks = books.filter((theBooks) =>
+  theBooks.genres.includes("adventure")
+);
+console.log(adventureBooks);
+
+const adventureBooksTitle = books
+  .filter((theBooks) => theBooks.genres.includes("adventure"))
+  .map((theBooks) => theBooks.title);
+console.log(adventureBooksTitle);
