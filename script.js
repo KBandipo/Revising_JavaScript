@@ -333,3 +333,9 @@ console.log(booksAfterAdd);
 //2. Delete book object from array
 const booksAfterDelete = booksAfterAdd.filter((book) => book.id !== 3);
 console.log(booksAfterDelete);
+
+// 3. Update book object inthe array
+const booksAfterUpdate = booksAfterDelete.map((book) =>
+  book.id === 1 ? { ...book, pages: 1210 } : book
+);
+console.log(booksAfterUpdate);
