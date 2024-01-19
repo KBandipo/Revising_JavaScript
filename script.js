@@ -160,7 +160,7 @@ const book = getBook(2);
 // const hasMovieAdaptation =book.hasMovieAdaptation;
 // hasMovieAdaptation;
 
-book;
+console.log(book);
 
 //Destructuring with object
 const { title, author, hasMovieAdaptation, pages, genres, publicationDate } =
@@ -237,7 +237,7 @@ count;
 const books = getBooks();
 books;
 
-// Map method
+// 1. Map method
 
 const titles = books.map((book) => book.title);
 console.log(titles);
@@ -264,7 +264,7 @@ const moreNewDataInArray = books.map((book) => [
 ]);
 console.log(moreNewDataInArray);
 
-// Filter Method
+// 2. Filter Method
 
 const authorName = books.filter((book) => book.author === "J. R. R. Tolkien");
 authorName;
@@ -287,12 +287,12 @@ const adventureBooksTitle = books
   .map((theBooks) => theBooks.title);
 console.log(adventureBooksTitle);
 
-// Reduce method
+// 3. Reduce method
 
 const countPagesAllBooks = books.reduce((sum, book) => sum + book.pages, 0);
 console.log(countPagesAllBooks);
 
-// Sort method
+// 4. Sort method
 const arrNumber = [4, 6, 2, 3, 0, 9];
 /* 
 const sorted = arrNumber.sort((a, b) => a - b);
@@ -316,3 +316,16 @@ const titleSortBooksByPages = books
   .sort((a, b) => a.pages - b.pages)
   .map((book) => book.title);
 console.log(titleSortBooksByPages);
+
+// Working wtih immutable Arrays
+
+// 1. Add book object to array
+
+const newBook = {
+  id: 6,
+  title: "Harry Potter and the Chamber of Secrets",
+  author: "J. K. Rowling",
+};
+
+const booksAfterAdd = [...books, newBook];
+console.log(booksAfterAdd);
