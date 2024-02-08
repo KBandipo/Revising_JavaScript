@@ -232,7 +232,7 @@ const count = book.reviews.librarything.reviewsCount ?? "No data";
 count;
  */
 
-// Array methods: Map, Filter and Reduce
+// Three Array methods: Map, Filter and Reduce
 
 const books = getBooks();
 books;
