@@ -142,6 +142,23 @@ function getBooks() {
 function getBook(id) {
   return data.find((d) => d.id === id);
 }
+const book = getBook(3);
+const { author, title, pages, genres } = book;
+console.log(author, title, pages);
+
+const [primaryGen, ...secondaryGen] = genres;
+primaryGen;
+secondaryGen;
+
+const newGenres = ["fantabulous", ...genres];
+newGenres;
+
+const addBook={...book,newProperty:"something new"}
+addBook
+
+
+
+
 /* 
 //Destructuring
 
@@ -339,3 +356,12 @@ const booksAfterUpdate = booksAfterDelete.map((book) =>
   book.id === 1 ? { ...book, pages: 1210 } : book
 );
 console.log(booksAfterUpdate);
+
+
+// *****************************************
+
+data.forEach(function (name){ name.title})
+
+ for (let book of data){
+  return book.title
+}
